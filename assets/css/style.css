@@ -18,11 +18,9 @@
 }
 
 body {
-    min-height: 100vh;
+   min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+    flex-direction: column;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     background: var(--bg-gradient);
     color: var(--text-main);
@@ -175,6 +173,28 @@ body {
     }
 }
 
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Match the Bootstrap footer to your dark theme */
+footer {
+    border-color: var(--card-border) !important;
+}
+
+footer span,
+footer a {
+    color: var(--text-muted) !important;
+}
+
+footer a:hover {
+    color: var(--text-main) !important;
+}
+
 /* Stack inputs vertically on small mobile screens */
 @media (max-width: 480px) {
     .card {
@@ -185,3 +205,4 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
